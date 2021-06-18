@@ -6,8 +6,8 @@
 ### Request
 - GET
   - HTTP 메세지의 헤더에 데이터를 추가해 전달하는 방식
-  - method: .get [default]
-  - encoder: URLEncoding.default [default]
+  - method [default]: .get 
+  - encoding [default]: URLEncoding.default
 ```swift
 // 1. 쿼리스트링 사용
 AF.request("https://httpbin.org/get?foo=bar")
