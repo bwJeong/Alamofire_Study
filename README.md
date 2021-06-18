@@ -13,6 +13,7 @@
 AF.request("https://httpbin.org/get?foo=bar")
 
 // 2. 파라미터 변수 사용
+// URL에 파라미터 변수로 만든 쿼리스트링이 추가되어 전달되기 때문에 1.과 동일
 let parameters = ["foo" : "bar"]
 AF.request("https://httpbin.org/get", parameters: parameters)
 ```
