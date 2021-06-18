@@ -24,7 +24,8 @@ AF.request("https://httpbin.org/get?foo=bar")
 let parameters = ["foo" : "bar"]
 AF.request("https://httpbin.org/get", parameters: parameters)
 ```
-- POST: HTTP 메세지의 Body에 데이터를 추가해 전달하는 방식
+- POST
+  - HTTP 메세지의 Body에 데이터를 추가해 전달하는 방식
 ```swift
 let parameters = ["foo" : "bar"]
 AF.request("https://httpbin.org/post", method: .post, parameters: parameters)
