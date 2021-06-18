@@ -30,3 +30,18 @@ AF.request("https://httpbin.org/get", parameters: parameters)
 let parameters = ["foo" : "bar"]
 AF.request("https://httpbin.org/post", method: .post, parameters: parameters)
 ```
+
+### Response
+- Response는 async로 진행되므로, 이후의 작업 또한 async로 진행해야 함
+- response, responseData, responseString, responseJSON, responseDecodable와 같은 다양한 기능을 제공
+```swift
+// 간단 예시
+AF.request(url).responseJSON { response in
+  switch response.result {
+    case .success(let res):
+      ...
+    case .failure(let err):
+      ...
+  }
+}
+```
